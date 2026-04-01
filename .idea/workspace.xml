@@ -4,33 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="448bdac9-ca6f-45db-8076-699aac61d6e1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.flake8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/hubit-tracker.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/config/celery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/management/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/management/commands/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/management/commands/bot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/management/commands/set_chat_id.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/permissions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/tasks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/tests/test_models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/tests/test_permissions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/tests/test_serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/tests/test_tasks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/tests/test_views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/habits/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/habit_tracker/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="448bdac9-ca6f-45db-8076-699aac61d6e1" name="Changes" comment="coursework_5 done">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/habits/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/migrations/0002_profile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/habits/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/habits/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/habits/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/habits/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/poetry.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,20 +32,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Akmal-coder"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Akmal-coder&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:Akmal-coder/hubit-tracker.git",
-    "accountId": "b03700cf-1638-4fe4-8465-e95fe8e56f47"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Akmal-coder/hubit-tracker.git&quot;,
+    &quot;accountId&quot;: &quot;b03700cf-1638-4fe4-8465-e95fe8e56f47&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -72,7 +64,7 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+    &quot;git-widget-placeholder&quot;: &quot;feature/coursework__5&quot;
   }
 }</component>
   <component name="SharedIndexes">
@@ -90,7 +82,31 @@
       <option name="presentableId" value="Default" />
       <updated>1774930515262</updated>
     </task>
+    <task id="LOCAL-00001" summary="coursework_5 done">
+      <option name="closed" value="true" />
+      <created>1774945608696</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1774945608696</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="coursework_5 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="coursework_5 done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
