@@ -1,9 +1,31 @@
-from rest_framework import generics, viewsets
-from rest_framework.permissions import AllowAny, IsAuthenticated
-
-from .models import Habit
+from rest_framework import viewsets, generics
+from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from .models import Habit, User
+from .serializers import HabitSerializer, RegisterSerializer, UserSerializer
 from .permissions import IsOwnerOrReadOnly
-from .serializers import HabitSerializer
+
+
+class RegisterView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    permission_classes = (AllowAny,)
+    serializer_class = RegisterSerializer
+
+
+class CustomTokenObtainPairView(TokenObtainPairView):
+    permission_classes = (AllowAny,)
+
+
+class CustomTokenRefreshView(TokenRefreshView):
+    permission_classes = (AllowAny,)
+
+
+class UserDetailView(generics.RetrieveUpdateAPIView):
+    serializer_class = UserSerializer
+    permission_classes = (IsAuthenticated,)
+
+    def get_object(self):
+        return self.request.user
 
 
 class HabitViewSet(viewsets.ModelViewSet):
