@@ -35,27 +35,36 @@ jobs:
       - name: Build Docker images
         run: docker-compose build
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: docker-build
-    if: github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/feature/final_task'
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install Docker Compose
-        run: |
+deploy:
+  runs-on: ubuntu-latest
+  needs: docker-build
+  if: github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/feature/final_task'
+  steps:
+    - uses: actions/checkout@v4
+    - name: Install Docker Compose
+      run: |
+        sudo apt-get update
+        sudo apt-get install docker-compose -y
+    - name: Setup SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+    - name: Deploy to server
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
+          # Install Docker and Docker Compose
           sudo apt-get update
-          sudo apt-get install docker-compose -y
-      - name: Setup SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-      - name: Deploy to server
-        run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
-            cd /opt/habit-tracker || git clone git@github.com:${{ github.repository }}.git /opt/habit-tracker
-            cd /opt/habit-tracker
-            git pull origin ${{ github.ref_name }}
-            docker-compose down
-            docker-compose up -d --build
-          EOF
+          sudo apt-get install -y docker.io docker-compose
+          sudo systemctl start docker
+          sudo systemctl enable docker
+          
+          # Clone or pull repo
+          cd /home/ubuntu/habit-tracker || git clone git@github.com:Akmal-coder/hubit-tracker.git /home/ubuntu/habit-tracker
+          cd /home/ubuntu/habit-tracker
+          git pull origin ${{ github.ref_name }}
+          
+          # Deploy with Docker Compose
+          docker-compose down
+          docker-compose up -d --build
+        EOF
