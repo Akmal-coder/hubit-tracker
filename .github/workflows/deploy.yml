@@ -51,7 +51,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install docker-compose -y
       - name: Build Docker images
-        run: docker-compose build
+        run: docker-compose --env-file .env build
 
   deploy:
     runs-on: ubuntu-latest
