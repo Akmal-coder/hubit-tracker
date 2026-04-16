@@ -2,59 +2,55 @@
 
 Бэкенд-часть SPA веб-приложения для трекера полезных привычек с Telegram-уведомлениями.
 
+## Ссылка на сервер
+http://89.169.162.73
+
 ## Технологии
 
 - Python 3.13
-- Django + DRF
-- PostgreSQL (SQLite для разработки)
-- Celery + Redis
+- Django + DRF + JWT
+- PostgreSQL + Redis
+- Celery + Celery Beat
 - Telegram Bot API
-- Docker (опционально)
+- Docker + Docker Compose
+- GitHub Actions (CI/CD)
 
-## Установка и запуск
+## Локальный запуск
 
-### 1. Клонировать репозиторий
+Клонировать репозиторий
+git clone https://github.com/Akmal-coder/hubit-tracker.git
+cd hubit-tracker
 
-```bash
-git clone git@github.com:ТВОЙ_НИК/habit-tracker.git
-cd habit-tracker
-2. Установить зависимости
-bash
-poetry install
-3. Настроить переменные окружения
-Скопировать .env.example в .env и заполнить:
-
+## Создать .env файл
 bash
 cp .env.example .env
-4. Выполнить миграции
-bash
-poetry run python manage.py migrate
-5. Создать суперпользователя
-bash
-poetry run python manage.py createsuperuser
-6. Запустить сервер
-bash
-poetry run python manage.py runserver 8080
-7. Запустить Redis и Celery
-bash
-redis-server
-poetry run celery -A config worker -l info --pool=solo
-poetry run celery -A config beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
-8. Запустить Telegram бота
-bash
-poetry run python manage.py bot
-Эндпоинты API
-GET /api/habits/ — список привычек пользователя (пагинация 5)
+Заполнить переменные (SECRET_KEY, DB_*, TELEGRAM_BOT_TOKEN)
 
-GET /api/public/ — список публичных привычек
-
-POST /api/habits/ — создание привычки
-
-PUT /api/habits/{id}/ — редактирование
-
-DELETE /api/habits/{id}/ — удаление
-
-Тесты
+## Запустить через Docker Compose
 bash
-poetry run pytest --cov=habits
-/
+docker-compose up -d --build
+
+## API эндпоинты
+Метод	    Эндпоинт	            Описание
+POST	    /api/register/	        Регистрация пользователя
+POST	    /api/login/	            Авторизация (JWT токен)
+GET	        /api/habits/	        Список привычек (пагинация 5)
+POST	    /api/habits/	        Создание привычки
+PUT        /DELETE/api/habits/{id}/	Редактирование/удаление
+GET	        /api/public/	        Публичные привычки
+
+
+## Настройка CI/CD
+В GitHub Secrets необходимо добавить:
+
+Secret:	                Описание:
+SSH_PRIVATE_KEY	        Приватный SSH-ключ для доступа к серверу
+SERVER_IP	            IP адрес сервера
+SERVER_USER	            Имя пользователя на сервере
+
+
+**Скопируй, замени содержимое `README.md`, затем:**
+
+git add README.md
+git commit -m "Update README: add server URL and CI/CD instructions"
+git push origin feature/final_task
