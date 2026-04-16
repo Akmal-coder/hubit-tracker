@@ -28,6 +28,10 @@ jobs:
     needs: test-and-lint
     steps:
       - uses: actions/checkout@v4
+      - name: Install Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install docker-compose -y
       - name: Build Docker images
         run: docker-compose build
 
@@ -37,6 +41,10 @@ jobs:
     if: github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/feature/final_task'
     steps:
       - uses: actions/checkout@v4
+      - name: Install Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install docker-compose -y
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
