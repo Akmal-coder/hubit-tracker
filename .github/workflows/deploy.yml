@@ -34,24 +34,23 @@ jobs:
     needs: test-and-lint
     steps:
       - uses: actions/checkout@v4
-      - name: Create .env file for Docker
-        run: |
-          echo "SECRET_KEY=django-insecure-test-key-for-ci" > .env
-          echo "DEBUG=False" >> .env
-          echo "ALLOWED_HOSTS=localhost" >> .env
-          echo "DB_NAME=habit_db" >> .env
-          echo "DB_USER=postgres" >> .env
-          echo "DB_PASSWORD=postgres" >> .env
-          echo "DB_HOST=db" >> .env
-          echo "DB_PORT=5432" >> .env
-          echo "TELEGRAM_BOT_TOKEN=dummy_token" >> .env
-          echo "REDIS_URL=redis://redis:6379/0" >> .env
       - name: Install Docker Compose
         run: |
           sudo apt-get update
           sudo apt-get install docker-compose -y
       - name: Build Docker images
-        run: docker-compose --env-file .env build
+        run: |
+          export SECRET_KEY=django-insecure-test-key-for-ci
+          export DEBUG=False
+          export ALLOWED_HOSTS=localhost
+          export DB_NAME=habit_db
+          export DB_USER=postgres
+          export DB_PASSWORD=postgres
+          export DB_HOST=db
+          export DB_PORT=5432
+          export TELEGRAM_BOT_TOKEN=dummy_token
+          export REDIS_URL=redis://redis:6379/0
+          docker-compose build
 
   deploy:
     runs-on: ubuntu-latest
