@@ -57,3 +57,4 @@ DELETE /api/habits/{id}/ — удаление
 Тесты
 bash
 poetry run pytest --cov=habits
+/
