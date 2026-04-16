@@ -59,8 +59,8 @@ jobs:
             sudo systemctl start docker
             sudo systemctl enable docker
             
-            # Clone or pull repo
-            cd /home/ubuntu/habit-tracker || git clone git@github.com:Akmal-coder/hubit-tracker.git /home/ubuntu/habit-tracker
+            # Clone or pull repo (HTTPS)
+            cd /home/ubuntu/habit-tracker || git clone https://github.com/Akmal-coder/hubit-tracker.git /home/ubuntu/habit-tracker
             cd /home/ubuntu/habit-tracker
             git pull origin ${{ github.ref_name }}
             
