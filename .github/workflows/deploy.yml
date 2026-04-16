@@ -40,6 +40,7 @@ jobs:
           sudo apt-get install docker-compose -y
       - name: Build Docker images
         run: |
+          touch .env
           export SECRET_KEY=django-insecure-test-key-for-ci
           export DEBUG=False
           export ALLOWED_HOSTS=localhost
