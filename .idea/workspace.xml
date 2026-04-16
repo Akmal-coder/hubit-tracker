@@ -5,19 +5,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="448bdac9-ca6f-45db-8076-699aac61d6e1" name="Changes" comment="coursework_5 done">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nginx/nginx/default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/habit_tracker/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/habit_tracker/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/habits/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/migrations/0002_profile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/habits/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/habits/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/habits/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/habits/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/habit_tracker/poetry.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/habit_tracker/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/habit_tracker/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/.coverage" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/config/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/config/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/config/celery.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/config/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/config/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/config/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/management/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/management/commands/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/management/commands/bot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/management/commands/set_chat_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/permissions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/tasks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/tests/test_models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/tests/test_permissions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/tests/test_serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/tests/test_tasks.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/tests/test_views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/habits/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/pytest.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/src/habit_tracker/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/habit_tracker/tests/__init__.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,9 +95,14 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/coursework__5&quot;
+    &quot;git-widget-placeholder&quot;: &quot;feature/final__task&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sazer\PycharmProjects\hubit-tracker" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -90,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1774945608696</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="coursework_5 done">
+      <option name="closed" value="true" />
+      <created>1775034834304</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1775034834304</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,6 +149,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Обновление .gitignore" />
     <MESSAGE value="coursework_5 done" />
     <option name="LAST_COMMIT_MESSAGE" value="coursework_5 done" />
   </component>
