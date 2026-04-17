@@ -14,6 +14,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
+      - name: Create .env file for tests
+        run: |
+          echo "SECRET_KEY=django-insecure-test-key-for-ci" > .env
+          echo "DEBUG=True" >> .env
+          echo "ALLOWED_HOSTS=localhost" >> .env
+          echo "TELEGRAM_BOT_TOKEN=dummy_token" >> .env
       - name: Install dependencies
         run: |
           pip install flake8 pytest pytest-django pytest-cov
@@ -33,7 +39,19 @@ jobs:
           sudo apt-get update
           sudo apt-get install docker-compose -y
       - name: Build Docker images
-        run: docker-compose build
+        run: |
+          touch .env
+          export SECRET_KEY=django-insecure-test-key-for-ci
+          export DEBUG=False
+          export ALLOWED_HOSTS=localhost
+          export DB_NAME=habit_db
+          export DB_USER=postgres
+          export DB_PASSWORD=postgres
+          export DB_HOST=db
+          export DB_PORT=5432
+          export TELEGRAM_BOT_TOKEN=dummy_token
+          export REDIS_URL=redis://redis:6379/0
+          docker-compose build
 
   deploy:
     runs-on: ubuntu-latest
